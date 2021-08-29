@@ -50,6 +50,8 @@ ruby app.rb
 
 ![document](https://user-images.githubusercontent.com/990877/131267502-c38b5440-6e97-4dc0-b3b3-9663986f065f.png)
 
+6º Instalação do Mongo ID | https://rubygems.org/gems/mongoid
+
 ##
 
 ## Robo 3T | https://robomongo.org/ (Cliente para MongoDB)
