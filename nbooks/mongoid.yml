@@ -1,0 +1,6 @@
+development:
+  clients:
+    default:
+      uri: mongodb+srv://books:books@cluster0.cgi4m.mongodb.net/books?retryWrites=true&w=majority
+      options:
+        server_selection_timeout: 5
