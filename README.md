@@ -1,5 +1,5 @@
-# Criando do zero uma API RestFul utilizando Ruby com Sinatra
-Criando um API RestFul utilizando a linguagem Ruby com o framework Sinatra, para estudar com mais profundidade os Testes nesse tipo de API's.
+# Criando do zero uma RestFul-API utilizando Ruby com Sinatra
+Criando um API RestFul utilizando a linguagem Ruby com o framework Sinatra, para estudar com mais profundidade os Testes✅ nesse tipo requisições.
 
 <div align="center">
 
