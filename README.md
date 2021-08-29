@@ -12,4 +12,18 @@ Criando um API RestFul utilizando a linguagem Ruby com o framework Sinatra, para
   * http://sinatrarb.com/
   * https://www.ruby-lang.org/en/
   * https://github.com/rbenv/rbenv
+  * https://insomnia.rest/
+  * https://www.postman.com/
   
+```shell script
+gem install
+```
+```shell script
+bundle init
+```
+```shell script
+bundle install
+```
+```shell script
+ruby app.rb
+```
