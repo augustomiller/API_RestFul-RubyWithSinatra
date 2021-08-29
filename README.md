@@ -16,6 +16,8 @@ Criando um API RestFul utilizando a linguagem Ruby com o framework Sinatra, para
   * https://www.postman.com/
   * https://www.mongodb.com
   * https://robomongo.org
+
+## Inicializando o Projeto
   
 ```shell script
 gem install
