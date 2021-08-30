@@ -1,9 +1,7 @@
-require "httparty"
-
 describe "GET /" do
 
     before do
-        @resp = HTTParty.get("http://localhost:4567/")
+        @resp = BaseApi.get("/")
     end
 
     it "CN-1 Deve retirnar Status code 200" do

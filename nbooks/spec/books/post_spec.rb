@@ -12,8 +12,8 @@ describe "POST /books" do
                 isbn: "8580630333"
             }
     
-            @resp = HTTParty.post(
-                "http://localhost:4567/books",
+            @resp = BaseApi.post(
+                "/books",
                 body: payload.to_json
             )
         end
@@ -25,8 +25,8 @@ describe "POST /books" do
 
     context "Quando o payload é nulo:" do
         before do
-            @resp = HTTParty.post(
-                "http://localhost:4567/books",
+            @resp = BaseApi.post(
+                "/books",
                 body: nil,
             )
         end
