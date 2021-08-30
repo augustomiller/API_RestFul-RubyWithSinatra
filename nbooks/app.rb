@@ -29,11 +29,16 @@ namespace "/books" do
     end
 
     post do
-        payload = JSON.parse(request.body.read)
-        book = Book.new(payload)
-        book.save
-        status 201
-        return book.to_json
-    end
+        begin
+            payload = JSON.parse(request.body.read)
+            book = Book.new(payload)
+            book.save
+            status 201
+            return book.to_json      
+        rescue => exception
+            puts exception
+            halt 400, { error: exception }.to_json
+        end
 
+    end
 end
