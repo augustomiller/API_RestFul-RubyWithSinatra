@@ -31,6 +31,13 @@ namespace "/books" do
     post do
         begin
             payload = JSON.parse(request.body.read)
+
+            found = Book.where(isbn: payload["isbn"]).first
+
+            if found
+                halt 409, { error: "ISBN Dupilcado!" }.to_json
+            end
+
             book = Book.new(payload)
             book.save
             status 201
