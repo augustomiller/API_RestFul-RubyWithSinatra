@@ -66,3 +66,27 @@ mongodb+srv://books:<password>@cluster0.cgi4m.mongodb.net/myFirstDatabase?retryW
 
 #### Configuração da conexão no Projeto Ruby | https://docs.mongodb.com/mongoid/current/tutorials/getting-started-sinatra/
 
+## Faker
+
+https://github.com/faker-ruby/faker
+
+Random Book Title
+```shell script
+Faker::Book.title #=> "The Odd Sister"
+```
+Random Author
+```shell script
+Faker::Book.author #=> "Alysha Olsen"`shell script
+```
+Random Publisher
+```shell script
+Faker::Book.publisher #=> "Opus Reader"
+```
+Random Genre
+```shell script
+Faker::Book.genre #=> "Mystery"
+```
+ISBN randon
+```shell script
+Faker::Code.isbn #=> "759021701-8"
+```
