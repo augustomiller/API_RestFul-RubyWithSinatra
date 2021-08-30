@@ -64,3 +64,5 @@ mongodb+srv://books:<password>@cluster0.cgi4m.mongodb.net/myFirstDatabase?retryW
 
 ![robo3t](https://user-images.githubusercontent.com/990877/131267550-711da47e-910b-4397-912e-ebc66e28d80b.png)
 
+## Configuração da conexão no Projeto Ruby | https://docs.mongodb.com/mongoid/current/tutorials/getting-started-sinatra/
+
