@@ -33,10 +33,16 @@ namespace "/books" do
         book = Book.where(_id: book_id).first
 
         unless book
-            halt 404, {}.to_json
+            halt 404, {}.to_json 
         end
 
         return book.to_json
+    end
+
+    delete "/:book_id" do |book_id|
+        book = Book.where(_id: book_id).first
+        book.destroy if book
+        status 204
     end
 
     post do
