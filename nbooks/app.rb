@@ -28,4 +28,13 @@ namespace "/books" do
     get do
         return Book.all.to_json
     end
+
+    post do
+        payload = JSON.parse(request.body.read)
+        book = Book.new(payload)
+        book.save
+        status 201
+        return book.to_json
+    end
+
 end
