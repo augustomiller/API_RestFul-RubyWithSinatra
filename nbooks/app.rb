@@ -33,6 +33,22 @@ namespace "/books" do
         begin
             payload = JSON.parse(request.body.read)
 
+            #Valida Titulo nulo.
+            unless payload["title"]
+               halt 409, { error: "Título é obrigatório!" }.to_json
+            end
+
+            #Valida Autor nulo.
+            unless payload["author"]
+                halt 409, { error: "Autor é obrigatório!" }.to_json
+            end
+
+            #Valida ISBN nulo.
+            unless payload["isbn"]
+                halt 409, { error: "ISBN é obrigatório!" }.to_json
+            end
+
+            #Valida duplicidade de ISBN.
             found = Book.where(isbn: payload["isbn"]).first
 
             if found
