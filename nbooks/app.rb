@@ -8,7 +8,6 @@ Mongoid.load! "mongoid.yml"
 class Book
     include Mongoid::Document
 
-    field :id, type: Object
     field :title, type: String
     field :author, type: String
     field :isbn, type: String
