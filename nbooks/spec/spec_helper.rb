@@ -1,4 +1,5 @@
 # Importação que valerá para todos os arquivos de testes.
+require "faker"
 require_relative "base_api.rb"
 
 RSpec.configure do |config|

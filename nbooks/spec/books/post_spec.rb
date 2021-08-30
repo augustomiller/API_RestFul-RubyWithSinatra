@@ -9,7 +9,7 @@ describe "POST /books" do
             payload = { 
                 title: "The Bugs Book",
                 author: "Pequeno Gafanhoto",
-                isbn: "8580630333"
+                isbn: Faker::Code.isbn
             }
     
             @resp = BaseApi.post(
@@ -23,7 +23,7 @@ describe "POST /books" do
         end
     end
 
-    context "Quando o payload é nulo:" do
+    context "Quando o payload é nulo." do
         before do
             @resp = BaseApi.post(
                 "/books",
@@ -34,5 +34,24 @@ describe "POST /books" do
         it "CN-4 Deve retornar 400." do
             expect(@resp.code).to eql 400
         end 
+    end
+
+    context "Quando o ISBN já existe." do
+
+        before do
+            payload = { 
+                title: "Arquitetura limpa",
+                author: "Robert C. Martin",
+                isbn: Faker::Code.isbn
+            }
+            # O primeiro post faz o cadastro e o segundo testa...
+            BaseApi.post( "/books", body: payload.to_json )
+            @resp = BaseApi.post( "/books", body: payload.to_json )
+
+        end
+
+        it "CN-5 Deve retornar 409." do
+            expect(@resp.code).to eql 409
+        end
     end
 end
