@@ -29,6 +29,16 @@ namespace "/books" do
         return Book.all.to_json
     end
 
+    get "/:book_id" do |book_id|
+        book = Book.where(_id: book_id).first
+
+        unless book
+            halt 404, {}.to_json
+        end
+
+        return book.to_json
+    end
+
     post do
         begin
             payload = JSON.parse(request.body.read)
