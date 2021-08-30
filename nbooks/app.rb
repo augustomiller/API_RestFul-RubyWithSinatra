@@ -8,7 +8,6 @@ Mongoid.load! "mongoid.yml"
 class Book
     include Mongoid::Document
 
-    field :id, type: Object
     field :title, type: String
     field :author, type: String
     field :isbn, type: String
@@ -28,4 +27,13 @@ namespace "/books" do
     get do
         return Book.all.to_json
     end
+
+    post do
+        payload = JSON.parse(request.body.read)
+        book = Book.new(payload)
+        book.save
+        status 201
+        return book.to_json
+    end
+
 end
