@@ -5,6 +5,7 @@ require "mongoid"
 # Mongo DB connect
 Mongoid.load! "mongoid.yml"
 
+# Model - Modelo de Dados
 class Book
     include Mongoid::Document
 

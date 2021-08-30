@@ -1,6 +1,9 @@
 # Importação que valerá para todos os arquivos de testes.
 require "faker"
 require_relative "base_api.rb"
+require_relative "../app.rb"
+
+Book .delete_all
 
 RSpec.configure do |config|
 
