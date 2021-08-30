@@ -25,6 +25,7 @@ GEM
     mongoid (7.1.4)
       activemodel (>= 5.1, < 6.1)
       mongo (>= 2.7.0, < 3.0.0)
+    multi_json (1.15.0)
     multi_xml (0.6.0)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
@@ -50,6 +51,12 @@ GEM
       rack (~> 2.2)
       rack-protection (= 2.1.0)
       tilt (~> 2.0)
+    sinatra-contrib (2.1.0)
+      multi_json
+      mustermann (~> 1.0)
+      rack-protection (= 2.1.0)
+      sinatra (= 2.1.0)
+      tilt (~> 2.0)
     thread_safe (0.3.6)
     tilt (2.0.10)
     tzinfo (1.2.9)
@@ -63,6 +70,7 @@ DEPENDENCIES
   mongoid (= 7.1.4)
   rspec
   sinatra
+  sinatra-contrib
 
 BUNDLED WITH
    2.2.26

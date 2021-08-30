@@ -1,4 +1,5 @@
 require "sinatra"
+require "sinatra/namespace"
 require "mongoid"
 
 # Mongo DB connect
@@ -18,7 +19,13 @@ get "/" do
     return { message: "Welcome to Book API!" }.to_json
 end
 
-get "/books" do
-    content_type "application/json"
-    return Book.all.to_json
+namespace "/books" do
+
+    before do
+        content_type "application/json"
+    end
+
+    get do
+        return Book.all.to_json
+    end
 end
