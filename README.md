@@ -66,7 +66,9 @@ mongodb+srv://books:<password>@cluster0.cgi4m.mongodb.net/myFirstDatabase?retryW
 
 #### Configuração da conexão no Projeto Ruby | https://docs.mongodb.com/mongoid/current/tutorials/getting-started-sinatra/
 
-## Faker
+## Faker 🎭
+
+![fake](https://user-images.githubusercontent.com/990877/131378511-2fc7e0bf-3ac2-41e0-b22f-72a860595e14.png)
 
 https://github.com/faker-ruby/faker
 
