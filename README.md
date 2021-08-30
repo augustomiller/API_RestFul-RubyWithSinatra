@@ -3,7 +3,7 @@ Criando um API RestFul utilizando a linguagem Ruby com o framework Sinatra, para
 
 <div align="center">
 
-![teste api](https://user-images.githubusercontent.com/990877/131255944-7b66bd77-bc74-493d-ba21-3bde8cd9dc34.jpeg)
+![teste de api](https://user-images.githubusercontent.com/990877/131418510-0ff87b50-1e0d-4c9e-a368-a80afce062a9.png)
   
 </div>
   
